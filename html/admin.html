@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body id="admin-body">
+    <nav>
+        <a href="/html/index.html">Home</a>
+        <button type="button" id="logout-btn">Logout</button>
+    </nav>
+    <div id="message" style="display: none;"></div> <!-- Container for error/success messages -->
+        <div id="manage-doctors" class="container">
+            <h2>Manage Doctors</h2>
+            <form id="doctor-form" class="form-horizontal">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="doctor-name">Name:</label>
+                        <input type="text" id="doctor-name" required>
+                        <label for="doctor-qualification">Qualifications:</label>
+                        <input type="text" id="doctor-qualification" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="doctor-specialty">Specialty:</label>
+                        <input type="text" id="doctor-specialty" required>
+                        <label for="doctor-experience">Experience:</label>
+                        <input type="text" id="doctor-experience" required>
+                        <label for="doctor-availability">Availability:</label>
+                        <input type="text" id="doctor-availability" required>
+                    </div>
+                    <div class="form-group">
+                        <button type="button" id="add-doctor-btn">Add Doctor</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="container">
+            <h2>Doctors List</h2>
+            <div id="doctor-list"></div>
+        </div>
+
+        <div id="manage-patients" class="container">
+            <h2>Manage Patients</h2>
+            <form id="patient-form" class="form-horizontal">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="patient-name">Name:</label>
+                        <input type="text" id="patient-name" required>
+                        <label for="patient-age">Age:</label>
+                        <input type="text" id="patient-age" required>
+
+                    </div>
+                    <div class="form-group">
+                        <label for="patient-gender">Gender:</label>
+                        <input type="text" id="patient-gender" required>
+                        <label for="patient-condition">Condition:</label>
+                        <input type="text" id="patient-condition" required>
+                        <label for="patient-contact">Contact:</label>
+                        <input type="text" id="patient-contact" required>
+                    </div>
+                    <div class="form-group">
+                        <button type="button" id="add-patient-btn">Add Patient</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="container">
+            <h2>Patients List</h2>
+            <div id="patient-list"></div>
+        </div>
+
+        <div id="post-operation" class="container">
+            <h2> Operation Details</h2>
+            <form id="post-operation-form" class="form-horizontal">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="operation-date">Date of Surgery:</label>
+                        <input type="date" id="operation-date" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="operation-time">Time of Surgery:</label>
+                        <input type="time" id="operation-time" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="ot-id">OT ID:</label>
+                        <input type="text" id="ot-id" required>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="anesthesia-type">Type of Anesthesia:</label>
+                        <input type="text" id="anesthesia-type" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="anesthesiologist-name">Anesthesiologist Name:</label>
+                        <input type="text" id="anesthesiologist-name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="medic">Medic:</label>
+                        <input type="text" id="medic" required>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="nurses">Nurses:</label>
+                        <input type="text" id="nurses">
+                    </div>
+                    <div class="form-group">
+                        <label for="pre-post-events">Pre/Post Operative Events:</label>
+                        <textarea id="pre-post-events" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="surgical-reports">Surgical Reports:</label>
+                        <input type="file" id="surgical-reports" multiple>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="remarks">Remarks:</label>
+                        <textarea id="remarks" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="special-drugs">Special Drugs:</label>
+                        <textarea id="special-drugs" required></textarea>
+                    </div>
+                </div>
+                <button type="button" id="post-operation-btn">Post Operation Details</button>
+            </form>
+        </div>
+            <div class="container">
+                <h2>Operation List</h2>
+                <div id="operation-list"></div>
+            </div>
+        <div id="message" style="display: none;"></div> <!-- Container for error/success messages -->
+
+    <!-- Firebase SDKs and JavaScript files -->
+    <script src="https://www.gstatic.com/firebasejs/9.9.3/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.9.3/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.9.3/firebase-firestore-compat.js"></script>
+
+    <script type="module" src="/js/config.js"></script>
+    <script type="module" src="/js/admin.js"></script> <!-- Ensure correct path -->
+</body>
+</html>

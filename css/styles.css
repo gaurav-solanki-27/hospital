@@ -1,0 +1,416 @@
+
+#index {
+    background-image: url('/images/index_img.jpg');
+    background-size: cover, cover, cover;
+    background-position: center, center, center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: rgb(26, 4, 4);
+    background-blend-mode: overlay;
+}
+
+nav {
+    width: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: space-around;
+    padding: 1rem 0;
+    position: absolute;
+    top: 0;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #f0a500;
+}
+
+.container-index {
+    background: rgba(19, 18, 18, 0.5);
+    padding: 2rem;
+    border-radius: 10px;
+}
+
+h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.btn {
+    background-color: #f0a500;
+    color: white;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #d48806;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+    
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    nav a {
+        font-size: 1rem;
+    }
+
+    .container {
+        padding: 1.5rem;
+    }
+
+    .btn {
+        padding: 0.4rem 0.8rem;
+    }
+
+    #btn {
+        padding: 0.4rem 0.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2{
+        font-size: 1rem;
+    }
+
+    nav {
+        flex-direction: column;
+        padding: 0.5rem 0;
+    }
+
+    .container {
+        padding: 1rem;
+    }
+
+    .btn {
+        padding: 0.3rem 0.6rem;
+    }
+
+    #form {
+        padding: 1rem;
+    }
+
+    #btn {
+        padding: 0.3rem 0.6rem;
+    }
+}
+
+/* css for register page */
+
+#body {
+    background-image: url('/images/register_img.jpg');
+    background-size: cover, cover, cover;
+    background-position: center, center, center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: black;
+    background-blend-mode: overlay;
+    flex-direction: column;
+}
+
+#form{
+    background: rgba(0, 0, 0, 0.5);
+    padding: 2rem;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+#form input {
+    padding: 0.5rem;
+    width: 100%;
+    margin-bottom: 1rem;
+    border: none;
+    border-radius: 5px;
+}
+
+#btn {
+    background-color: #f0a500;
+    color: white;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#btn:hover {
+    background-color: #d48806;
+}
+
+#message {
+    margin-top: 1em;
+    padding: 1em;
+    border-radius: 4px;
+    display: none;
+}
+
+
+.links {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.links a {
+    margin-left: 0.5rem;
+    color: black;
+    text-decoration: none;
+}
+
+.links a.login-link{
+    color: red;
+}
+
+.links a.register-link {
+    color: red;
+} 
+#password-rules {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 1rem;
+    border-radius: 10px;
+    margin-top: 1rem;
+    text-align: left;
+}
+
+#password-rules p {
+    margin: 0.2rem 0;
+}
+
+
+/* css for admin page */
+
+
+#admin-body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 70px 0px 0px 0px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+  
+  /* Header */
+  .header-container {
+    background-color: #161511;
+    color: #b3a585;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  h1 {
+    margin: 0;
+  }
+  
+  /* Navigation *//* Navbar styles */
+nav {
+    width: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: space-around;
+    padding: 1rem 0;
+    position: absolute;
+    top: 0;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    background-color: #d48806;
+}
+
+  /* Content Area */
+  .container {
+    margin: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px 10px rgba(0, 0, 0, 0.1);
+    background-color: white;
+  }
+  
+  h2 {
+    margin-bottom: 15px;
+  }
+  
+  /* Forms */
+  .form-horizontal {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 10px;
+  }
+  
+  .form-row {
+    width: 50%;
+  }
+  
+  .form-group {
+    margin: 10px 0;
+    width: calc(50% - 15px); /* Adjust for spacing between groups */
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  input[type="text"],
+  input[type="date"],
+  input[type="time"],
+  textarea {
+    width: 60%;
+    padding: 15px;
+    border: 1px solid rgba(0, 0, 0, 0.7);
+    border-radius: 3px;
+  }
+  
+  button {
+    background-color: #f0a500;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  /* Operation List */
+  #operation-list,#patient-list,#doctor-list {
+    display: flex;
+    flex-direction: row;
+    justify-content:space-evenly;
+    /* Add styles for displaying the list of operations here */
+  }
+  
+  /* Message Container */
+  #message {
+    padding: 10px 20px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    display: none; /* Hide initially */
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .container {
+      width: 100%; /* Make containers full width on smaller screens */
+    }
+  
+    .form-group {
+      width: 100%; /* Make form groups full width on smaller screens */
+    }
+  }
+  
+  /* Success/Error Message Styles */
+  .success {
+    background-color: #dff0d8;
+    color: #468847;
+  }
+  
+  .error {
+    background-color: #f2dede;
+    color: #a94442;
+  }
+  
+
+  /* css for user page */
+
+  /* General styles */
+#user-body {
+    font-family: Arial, sans-serif;
+    background-color: white;
+    margin: 0;
+    padding: 80px 0px 0px 0px ;
+}
+
+h1, h2 {
+    text-align: center;
+    color: #333;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #343a40;
+    padding: 1rem;
+}
+
+nav a, nav button {
+    color: white;
+    text-decoration: none;
+    margin: 0 1rem;
+}
+
+nav button {
+    background-color: #f0a500;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+}
+
+nav button:hover {
+    background-color: #d48806;
+}
+
+#doctor-details, #surgical-details {
+    margin-bottom: 2rem;
+    /* display: flex;
+    flex-direction: row; */
+}
+
+#doctor-details-list, #surgical-details-list {
+    border: 1px solid white;
+    padding: 1rem;
+    background-color: white;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    box-shadow: 0 2px 5px 10px rgba(0, 0, 0, 0.1);
+}
+

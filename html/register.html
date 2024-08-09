@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>shareOut Registration</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<nav>
+    <a href="/html/index.html">Home</a>
+    <a href="/html/admin_login.html" class="btn">Admin Login</a>
+    <a href="/html/user_login.html" class="btn">User Login</a>
+    <a href="/html/register.html" class="btn">Register</a>
+    
+</nav>
+<body id="body">
+    <form id="form">
+        <h2>Register User</h2>
+        <label for="displayName">Display Name:</label>
+        <input type="text" id="displayName" required><br>
+        
+        <label for="email">Email:</label>
+        <input type="email" id="email" required><br>
+        
+        <label for="password">Password:</label>
+        <input type="password" id="password" required><br>
+        
+        <button type="button" id="btn">Register</button>
+            <div class="links">
+                <a> Already have an account?</a>
+                <a href="/html/user_login.html" class="login-link">Login here</a>
+              </div>
+    </form>
+    <div id="password-rules" style="display: none;">
+        <p id="length">- At least 8 characters long</p>
+        <p id="uppercase">- At least one uppercase letter</p>
+        <p id="lowercase">- At least one lowercase letter</p>
+        <p id="number">- At least one number</p>
+        <p id="special">- At least one special character (!@#$%^&*)</p>
+    </div>
+    <div id="message" style="display: none;"></div> <!-- Container for error/success messages -->
+
+    <!-- Firebase SDKs and JavaScript files -->
+    <script src="https://www.gstatic.com/firebasejs/9.9.3/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.9.3/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.9.3/firebase-firestore-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.9.3/firebase-storage-compat.js"></script>
+    <script type="module" src="/js/config.js"></script>
+    <script type="module" src="/js/register.js"></script> <!-- Adjust script paths as necessary -->
+</body>
+</html>
